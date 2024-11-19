@@ -1,101 +1,15 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-interface Category {
-  id: number
-  name: string
-}
-
-export default defineComponent({
-  data() {
-    return {
-      searchQuery: '' as string,
-      categories: [
-        { id: 1, name: 'Electronics' },
-        { id: 2, name: 'Clothing' },
-      ] as Category[]
-    }
-  },
-  methods: {
-    search() {
-      // Implement search functionality
-    }
-  }
-})
-</script>
-
 <template>
   <div>
-    <h1>商城</h1>
-    <input v-model="searchQuery" placeholder="搜索">
-    <button @click="search">搜索</button>
-    <div v-for="category in categories" :key="category.id">
-      <router-link :to="`/category/${category.id}`">{{ category.name }}</router-link>
-    </div>
+    <router-view /> <!-- 路由视图 -->
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  name: 'App',
+}
+</script>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
+/* 你可以在此添加全局样式 */
 </style>
