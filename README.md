@@ -12,7 +12,7 @@ Axios：用于与后端 API 进行 HTTP 请求和数据交互
 
 ## 推荐使用的IDE编辑器
 
-[Visual Studio Code（](https://code.visualstudio.com/) + [Vue插件]() + [Tailwind CSS IntelliSense插件](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+[Visual Studio Code](https://code.visualstudio.com/) + [Vue插件]() + [Tailwind CSS IntelliSense插件](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 [Visual Studio Code（Microsoft Store）](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q?ocid=pdpshare)
 
