@@ -14,7 +14,7 @@ Axios：用于与后端 API 进行 HTTP 请求和数据交互
 
 [Visual Studio Code（](https://code.visualstudio.com/) + [Vue插件]() + [Tailwind CSS IntelliSense插件](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-[Visual Studio Code（Microsoft Store）](ms-windows-store://pdp?ocid=storeweb-pdp-open-cta&hl=zh-cn&gl=sg&referrer=storeforweb&productid=xp9khm4bk9fz7q&webid=e6234c54-aa9d-4ad5-9dda-c669694778f8&websessionid=c00375cd-36f0-4dfe-b3c6-96ed62ac5b52)
+[Visual Studio Code（Microsoft Store）](https://apps.microsoft.com/store/detail/XP9KHM4BK9FZ7Q?ocid=pdpshare)
 
 ## 安装所需依赖
 
