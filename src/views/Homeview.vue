@@ -66,7 +66,7 @@
         鸡你实在是太美，哈！baby ohhh~鸡你太美，baby ohhh~</p>
       <p class="py-6">迎面走来的你让我如此蠢蠢欲动，这种感觉我从未有Caush i got a crush on you who you，吔~</p>
       <p class="py-6">在今后的节目中我还准备了很多我自己作词作曲编舞的原创的作品，期待的话请多多为我投票吧！❤️mua~</p>
-      <button class="btn btn-primary">Chicken you are so beautiful</button>
+      <a href="Login"><button class="btn btn-primary">Chicken you are so beautiful</button></a>
     </div>
   </div>
 </div>
@@ -135,25 +135,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-interface Category {
-  id: number
-  name: string
-}
-
 export default defineComponent({
-  data() {
-    return {
-      searchQuery: '' as string,
-      categories: [
-        { id: 1, name: 'Electronics' },
-        { id: 2, name: 'Clothing' },
-      ] as Category[]
-    }
-  },
-  methods: {
-    search() {
-      // Implement search functionality
-    }
-  }
 })
 </script>
