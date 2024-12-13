@@ -4,6 +4,7 @@ import Category from '../views/Category.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 import Cart from '../views/Cart.vue'
 import Login from '../views/Login.vue'
+import Account from '../views/Account.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
@@ -12,6 +13,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/product/:id', component: ProductDetail },
   { path: '/cart', component: Cart },
   { path: '/login', component: Login },
+  { path: '/account', component: Account},
 ]
 
 const router = createRouter({

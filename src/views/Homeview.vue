@@ -48,7 +48,7 @@
         </div>
         <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
           <li>
-            <a class="justify-between">账户设置 </a>
+            <a href="Account" class="justify-between">个人中心 </a>
           </li>
           <li><a>设置</a></li>
           <li><a>退出登录</a></li>
