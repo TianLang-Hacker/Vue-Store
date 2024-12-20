@@ -1,4 +1,4 @@
-# Vue Shopping
+# Vue Store
 
 **本项目采用[Vue3](https://cn.vuejs.org/)，[DaisyUI](https://daisyui.com/)和[**Tailwind CSS**](https://www.tailwindcss.cn/)来打造，安装和运行方法如下：**
 
