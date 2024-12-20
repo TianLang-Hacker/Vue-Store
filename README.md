@@ -1,14 +1,6 @@
 # Vue Shopping
 
-使用[Vue3](https://cn.vuejs.org/)作为基础框架
-
-[Vue Router：](https://router.vuejs.org/zh/)用于管理商城中的不同页面和路径
-
-Axios：用于与后端 API 进行 HTTP 请求和数据交互
-
-**Pinia**：用于管理应用的全局状态，如用户登录状态、购物车状态等
-
-[DaisyUI](https://daisyui.com/)：Vue框架下的一个UI组件库，依赖[**Tailwind CSS**]()**，推荐各位去看**[**Tailwind CSS的中文文档**](https://www.tailwindcss.cn/)
+**本项目采用[Vue3](https://cn.vuejs.org/)，[DaisyUI](https://daisyui.com/)和[**Tailwind CSS**](https://www.tailwindcss.cn/)来打造，安装和运行方法如下：**
 
 ## 推荐使用的IDE编辑器
 
@@ -28,7 +20,7 @@ npm install
 npm run dev
 ```
 
-### 为生产进行类型检查、编译和压缩
+### 为生产进行类型检查、编译和压缩：<span style="color:yellow;">可选</span>
 
 ```bash
 npm run build
