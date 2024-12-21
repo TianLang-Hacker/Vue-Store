@@ -7,6 +7,7 @@ export interface Product {
   price: number;
 }
 
+
 // 定义 CartState
 export interface CartState {
   items: Product[];
