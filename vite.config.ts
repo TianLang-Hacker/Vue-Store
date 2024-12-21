@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from 'tailwindcss';
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/' : '/', // 根据部署路径调整
+  base: mode === 'production' ? './' : './', // 根据部署路径调整
   plugins: [
     vue(),
     vueJsx(),
