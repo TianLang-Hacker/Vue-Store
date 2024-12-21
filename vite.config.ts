@@ -12,16 +12,19 @@ export default defineConfig(({ mode }) => ({
     vueJsx(),
     ...(mode === 'development' ? [vueDevTools()] : []), // 仅在开发模式启用
   ],
+
   css: {
     postcss: {
       plugins: [tailwindcss()],
     },
   },
   resolve: {
+
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+
 }));
 
 // export default defineConfig({

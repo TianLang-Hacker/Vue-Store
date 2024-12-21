@@ -8,12 +8,20 @@
     "playwright.config.*"
   ],
   "compilerOptions": {
-    "composite": true,
-    "noEmit": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "types": ["node"]
-  }
+    // "composite": true,
+    // "noEmit": true,
+    // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "types": ["node"],
+    "jsx":"preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+  // "include":["src/**/*.ts","src/**/*.d.ts","src/**/*.tsx","vue.config.ts"]
 }
+
+

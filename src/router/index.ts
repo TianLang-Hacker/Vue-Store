@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, RouterLink } from 'vue-router'
 import HomeView from '../views/Homeview.vue'
 import Category from '../views/Category.vue'
 import ProductDetail from '../views/ProductDetail.vue'
@@ -6,6 +6,7 @@ import Cart from '../views/Cart.vue'
 import Login from '../views/Login.vue'
 import Account from '../views/Account.vue'
 import type { RouteRecordRaw } from 'vue-router'
+import exp from 'constants'
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', component: HomeView },
@@ -20,5 +21,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 })
+
+// export default new RouterLink({
+
+//   router:[{
+//     path:"/",
+//     name:'home',
+//     component:Home
+//   }]
+// })
 
 export default router
