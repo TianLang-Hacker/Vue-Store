@@ -7,6 +7,7 @@ import Login from '../views/Login.vue'
 import Account from '../views/Account.vue'
 import type { RouteRecordRaw } from 'vue-router'
 import exp from 'constants'
+import Orders from '@/views/Orders.vue'
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', component: HomeView },
@@ -15,6 +16,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/cart', component: Cart },
   { path: '/login', component: Login },
   { path: '/account', component: Account},
+  { path: '/Orders', component: Orders},
 ]
 
 const router = createRouter({
