@@ -12,11 +12,11 @@ import Orders from '@/views/Orders.vue'
 const routes: Array<RouteRecordRaw> = [
   { path: '/', component: HomeView },
   { path: '/category/:id', component: Category },
-  { path: '/product/:id', component: ProductDetail },
+  { path: '/product/', component: ProductDetail },
   { path: '/cart', component: Cart },
   { path: '/login', component: Login },
-  { path: '/account', component: Account},
-  { path: '/Orders', component: Orders},
+  { path: '/account', component: Account },
+  { path: '/Orders', component: Orders },
 ]
 
 const router = createRouter({

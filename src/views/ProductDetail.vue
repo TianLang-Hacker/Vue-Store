@@ -1,15 +1,24 @@
 <template>
+  <!-- 导航栏 -->
   <div>
-    <h1>{{ product.name }}</h1>
-    <p>Price: {{ product.price }}</p>
-    <button @click="addToCart">Add to Cart</button>
+    <Navbar />
   </div>
+
+
+
+    <!-- 页脚 -->
+<div>
+  <Footer />
+</div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Footer from '@/components/Footer.vue'
+import Navbar from '@/components/Navbar.vue'
 import { useCartStore } from '../stores/cart'
 import axios from 'axios'
+
 
 interface Product {
   id: number
