@@ -1,58 +1,97 @@
 <template>
-<div class="navbar bg-base-100">
-    <div class="flex-none">
-      <button class="btn btn-square btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          class="inline-block h-5 w-5 stroke-current">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="flex-1">
-      <a class="btn btn-ghost text-xl">啊哈哈哈哈</a>
-    </div>
-
-    <div class="form-control">
-      <input type="text" placeholder="搜索" class="input input-bordered w-24 md:w-auto" />
-    </div>
-
-    <div class="flex-none">
-      <div class="dropdown dropdown-hover dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-          <div class="indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <span class="badge badge-sm indicator-item"></span>
+  <div class="navbar bg-base-100">
+    <div class="flex-1 flex items-center justify-between">
+      <!-- 左侧内容 -->
+      <div class="flex items-center gap-2">
+        <div class="drawer">
+          <input id="main-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <label for="main-drawer" class="btn btn-square btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                class="inline-block h-5 w-5 stroke-current">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </label>
           </div>
-        </div>
-        <div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
-          <div class="card-body">
-            <span class="text-lg font-bold">0 个项目</span>
-            <span class="text-info">合计：0 CNY</span>
-            <div class="card-actions">
-              <button class="btn btn-primary btn-block">查看购物车</button>
-            </div>
+
+          <!-- 侧边栏 -->
+          <div class="drawer-side z-50">
+            <label for="main-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-100 text-base-content 
+                  w-80 min-h-full p-4 border-r">
+              <!-- 侧边栏内容 -->
+              <li class="menu-title">
+                <span>功能菜单</span>
+              </li>
+              <li><a>首页</a></li>
+              <li><a>商品分类</a></li>
+              <li><a>购物车</a></li>
+              <li><a>个人中心</a></li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="dropdown dropdown-hover dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <img alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-          </div>
+
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl" href="/">首页</a>
+      </div>
+
+      <div class="form-control">
+        <input type="text" placeholder="搜索" class="input input-bordered w-24 md:w-auto" />
+      </div>
+
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn m-1">
+          Theme
+          <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+            <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+          </svg>
         </div>
-        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+        <ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
           <li>
-            <a href="Account" class="justify-between">个人中心 </a>
+            <input type="radio" name="theme-dropdown"
+              class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Default"
+              value="default" />
           </li>
-          <li><a>设置</a></li>
-          <li><a>退出登录</a></li>
+          <li>
+            <input type="radio" name="theme-dropdown"
+              class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro" value="retro" />
+          </li>
+          <li>
+            <input type="radio" name="theme-dropdown"
+              class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cyberpunk"
+              value="cyberpunk" />
+          </li>
+          <li>
+            <input type="radio" name="theme-dropdown"
+              class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Valentine"
+              value="valentine" />
+          </li>
+          <li>
+            <input type="radio" name="theme-dropdown"
+              class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Aqua" value="aqua" />
+          </li>
         </ul>
+      </div>
+
+      <div class="flex-none">
+        <div class="dropdown dropdown-hover dropdown-end">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+            <div class="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            <li>
+              <a href="Account" class="justify-between">个人中心 </a>
+            </li>
+            <li><a>设置</a></li>
+            <li><a>退出登录</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

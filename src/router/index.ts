@@ -1,22 +1,20 @@
 import { createRouter, createWebHistory, RouterLink } from 'vue-router'
 import HomeView from '../views/Homeview.vue'
 import Category from '../views/Category.vue'
-import ProductDetail from '../views/ProductDetail.vue'
-import Cart from '../views/Cart.vue'
 import Login from '../views/Login.vue'
 import Account from '../views/Account.vue'
 import type { RouteRecordRaw } from 'vue-router'
 import exp from 'constants'
 import Orders from '@/views/Orders.vue'
+import Commodity from '@/views/Commodity.vue'
 
 const routes: Array<RouteRecordRaw> = [
-  { path: '/', component: HomeView },
-  { path: '/category/:id', component: Category },
-  { path: '/product/', component: ProductDetail },
-  { path: '/cart', component: Cart },
-  { path: '/login', component: Login },
-  { path: '/account', component: Account },
-  { path: '/Orders', component: Orders },
+  { path: '/', component: HomeView }, // 默认路由（首页
+  { path: '/category/:id', component: Category },  
+  { path: '/login', component: Login }, // 登录注册
+  { path: '/account', component: Account }, // 账户
+  { path: '/Orders', component: Orders }, // 订单
+  { path: '/Commodity', component: Commodity }, // 商品
 ]
 
 const router = createRouter({
