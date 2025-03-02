@@ -14,9 +14,27 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/login', component: Login }, // 登录注册
   { path: '/account', component: Account }, // 账户
   { path: '/Orders', component: Orders }, // 订单
-  { path: '/Commodity', component: Commodity }, // 商品
+  {
+    path: '/commodity/:id',
+    component: Commodity,
+    beforeEnter: (to, from, next) => {
+      // 验证ID格式
+      if (!/^\d+$/.test(to.params.id as string)) {
+        next('/404')
+        return
+      }
+      
+      // 验证ID是否存在
+      fetch('/products.json')
+        .then(res => res.json())
+        .then(products => {
+          const exists = products.some((p: any) => p.id.toString() === to.params.id)
+          exists ? next() : next('/404')
+        })
+        .catch(() => next('/500'))
+    }
+  }
 ]
-
 const router = createRouter({
   history: createWebHistory(),
   routes,

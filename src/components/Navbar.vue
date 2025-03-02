@@ -88,7 +88,6 @@
             <li>
               <a href="Account" class="justify-between">个人中心 </a>
             </li>
-            <li><a>设置</a></li>
             <li><a>退出登录</a></li>
           </ul>
         </div>
@@ -97,8 +96,50 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, ref, watchEffect, onMounted } from 'vue'
+
+interface ThemeOption {
+  label: string
+  value: string
+}
+
+export default defineComponent({
   name: "Navbar",
-};
+  setup() {
+    const themeOptions: ThemeOption[] = [
+      { label: 'Default', value: 'default' },
+      { label: 'Retro', value: 'retro' },
+      { label: 'Cyberpunk', value: 'cyberpunk' },
+      { label: 'Valentine', value: 'valentine' },
+      { label: 'Aqua', value: 'aqua' }
+    ]
+
+    const savedTheme = localStorage.getItem('theme')
+    const systemIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const theme = ref(savedTheme || (systemIsDark ? 'dark' : 'light'))
+
+    const applyTheme = (themeName: string) => {
+      document.documentElement.setAttribute('data-theme', themeName)
+      window.dispatchEvent(new CustomEvent('theme-change', { detail: themeName }))
+    }
+
+    watchEffect(() => {
+      applyTheme(theme.value)
+      localStorage.setItem('theme', theme.value)
+    })
+
+    onMounted(() => {
+      applyTheme(theme.value)
+    })
+
+    return {
+      theme,
+      themeOptions
+    }
+  },
+ 
+})
+  
 </script>
+
