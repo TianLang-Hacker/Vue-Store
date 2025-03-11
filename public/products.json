@@ -1,0 +1,65 @@
+[
+    {
+      "id": "1001",
+      "title": "2024新款智能运动鞋",
+      "price": 599,
+      "description": "专业运动跑鞋，轻盈透气",
+      "images": [
+        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      ],
+      "shop": {
+        "name": "官方旗舰店",
+        "avatar": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
+        "certification": true
+      },
+      "specs": ["39码", "40码", "41码", "42码"],
+      "features": [
+        "智能计步与运动数据追踪",
+        "透气网面设计，全天候舒适"
+      ],
+      "rating": 4.5,
+      "reviewsCount": 1288
+    },
+
+    {
+      "id": "1002",
+      "title": "无线降噪耳机",
+      "price": 1299,
+      "description": "主动降噪蓝牙耳机",
+      "images": [
+        "https://example.com/headphone.jpg"
+      ],
+      "shop": {
+        "name": "数码旗舰店",
+        "avatar": "https://example.com/shop-avatar.jpg",
+        "certification": true
+      },
+      "specs": ["白色", "黑色"],
+      "features": [
+        "30小时续航",
+        "IPX4防水"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 892
+    },
+
+    {
+        "id": "1003",
+        "title": "666",
+        "price": 1299,
+        "description": "主动降噪蓝牙耳机",
+        "images": ["/img/6.jpg"],
+        "shop": {
+          "name": "666",
+          "avatar": "https://i0.hdslb.com/bfs/face/977e5df5104561acd91bcdca1576bd140c52678f.jpg@240w_240h_1c_1s_!web-avatar-space-header.avif",
+          "certification": true
+        },
+        "features": [
+          "30小时续航",
+          "IPX4防水"
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      }
+  ]
+
