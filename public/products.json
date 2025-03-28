@@ -1,7 +1,7 @@
 [
     {
       "id": "1001",
-      "title": "6",
+      "title": "Visual Studio Code",
       "price": 599,
       "description": "3",
       "images": [
@@ -73,6 +73,90 @@
         "specs": ["Man！", "What can i say","Mamba Out"],
         "features": [
           "Say you again"
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      },
+
+      {
+        "id": "1005",
+        "title": "Communist Party",
+        "price": 0 ,
+        "description": "",
+        "images": [
+          "/img/5.jpg"
+        ],
+        "shop": {
+          "name": "Communist Party",
+          "avatar": "",
+          "certification": true
+        },
+        "specs": [],
+        "features": [
+          ""
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      },
+      
+      {
+        "id": "1006",
+        "title": "Play",
+        "price": 6 ,
+        "description": "",
+        "images": [
+          "/img/3.jpg"
+        ],
+        "shop": {
+          "name": "",
+          "avatar": "",
+          "certification": true
+        },
+        "specs": [],
+        "features": [
+          ""
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      },
+      
+      {
+        "id": "1007",
+        "title": "(●'◡'●)",
+        "price": 999 ,
+        "description": "",
+        "images": [
+          "/img/7.jpg"
+        ],
+        "shop": {
+          "name": "( •̀ ω •́ )✧",
+          "avatar": "",
+          "certification": true
+        },
+        "specs": [],
+        "features": [
+          ""
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      },
+
+      {
+        "id": "1008",
+        "title": "HTML for babies",
+        "price": 10 ,
+        "description": "",
+        "images": [
+          "/img/8.jpg"
+        ],
+        "shop": {
+          "name": "HTML",
+          "avatar": "",
+          "certification": true
+        },
+        "specs": [],
+        "features": [
+          ""
         ],
         "rating": 4.8,
         "reviewsCount": 892
