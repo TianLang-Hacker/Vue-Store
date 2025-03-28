@@ -24,10 +24,7 @@
               <li class="menu-title">
                 <span>功能菜单</span>
               </li>
-              <li><a>首页</a></li>
-              <li><a>商品分类</a></li>
-              <li><a>购物车</a></li>
-              <li><a>个人中心</a></li>
+              <li><a href="/">首页</a></li>
             </ul>
           </div>
         </div>
