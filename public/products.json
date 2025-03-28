@@ -1,43 +1,40 @@
 [
     {
       "id": "1001",
-      "title": "2024新款智能运动鞋",
+      "title": "6",
       "price": 599,
-      "description": "专业运动跑鞋，轻盈透气",
+      "description": "3",
       "images": [
-        "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+        "/img/1.jpg"
       ],
       "shop": {
         "name": "官方旗舰店",
-        "avatar": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg",
+        "avatar": "",
         "certification": true
       },
-      "specs": ["39码", "40码", "41码", "42码"],
-      "features": [
-        "智能计步与运动数据追踪",
-        "透气网面设计，全天候舒适"
-      ],
+      "specs": ["1", "2", "3", "4"],
+      "features": [],
       "rating": 4.5,
       "reviewsCount": 1288
     },
 
     {
       "id": "1002",
-      "title": "无线降噪耳机",
-      "price": 1299,
-      "description": "主动降噪蓝牙耳机",
+      "title": "114514",
+      "price": 1919810 ,
+      "description": "嗯哼哼，啊啊啊啊啊",
       "images": [
-        "https://example.com/headphone.jpg"
+        "/img/2.png"
       ],
       "shop": {
-        "name": "数码旗舰店",
-        "avatar": "https://example.com/shop-avatar.jpg",
+        "name": "野兽先辈",
+        "avatar": "",
         "certification": true
       },
-      "specs": ["白色", "黑色"],
+      "specs": ["臭", "更臭"],
       "features": [
-        "30小时续航",
-        "IPX4防水"
+        "嗯哼哼",
+        "啊啊啊啊啊啊啊啊啊啊啊"
       ],
       "rating": 4.8,
       "reviewsCount": 892
@@ -47,7 +44,7 @@
         "id": "1003",
         "title": "666",
         "price": 1299,
-        "description": "主动降噪蓝牙耳机",
+        "description": "9",
         "images": ["/img/6.jpg"],
         "shop": {
           "name": "666",
@@ -55,8 +52,27 @@
           "certification": true
         },
         "features": [
-          "30小时续航",
-          "IPX4防水"
+        ],
+        "rating": 4.8,
+        "reviewsCount": 892
+      },
+
+      {
+        "id": "1004",
+        "title": "牢大",
+        "price": 0 ,
+        "description": "嗯哼哼，啊啊啊啊啊",
+        "images": [
+          "/img/4.jpg"
+        ],
+        "shop": {
+          "name": "牢大",
+          "avatar": "",
+          "certification": true
+        },
+        "specs": ["Man！", "What can i say","Mamba Out"],
+        "features": [
+          "Say you again"
         ],
         "rating": 4.8,
         "reviewsCount": 892

@@ -6,6 +6,7 @@ import Account from '../views/Account.vue'
 import type { RouteRecordRaw } from 'vue-router'
 import Orders from '@/views/Orders.vue'
 import Commodity from '@/views/Commodity.vue'
+import LoginRegister from '../views/Login.vue'
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', component: HomeView }, // 默认路由（首页
@@ -39,20 +40,17 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Search',
     component: () => import('@/views/SearchResults.vue'),
     props: true
+  },
+
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginRegister
   }
 ]
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
-
-// export default new RouterLink({
-
-//   router:[{
-//     path:"/",
-//     name:'home',
-//     component:Home
-//   }]
-// })
 
 export default router

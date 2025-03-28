@@ -88,21 +88,26 @@
       </ul>
     </div>
 
-      <div class="flex-none">
-        <div class="dropdown dropdown-hover dropdown-end">
+    <div class="flex-none">
+        <div v-if="isLoggedIn" class="dropdown dropdown-end">
           <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
             <div class="w-10 rounded-full">
-              <img alt="Tailwind CSS Navbar component"
+              <img alt="用户头像"
                 src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
             </div>
           </div>
           <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-            <li>
-              <a href="Account" class="justify-between">个人中心 </a>
-            </li>
-            <li><a>退出登录</a></li>
+            <li><a href="/account" class="justify-between">个人中心</a></li>
+            <li><a @click="handleLogout">退出登录</a></li>
           </ul>
         </div>
+        
+        <a v-else href="/login" class="btn btn-ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+          </svg>
+          登录/注册
+        </a>
       </div>
     </div>
   </div>
@@ -122,10 +127,6 @@ export default defineComponent({
   setup() {
     const themeOptions: ThemeOption[] = [
       { label: 'Default', value: 'default' },
-      { label: 'Retro', value: 'retro' },
-      { label: 'Cyberpunk', value: 'cyberpunk' },
-      { label: 'Valentine', value: 'valentine' },
-      { label: 'Aqua', value: 'aqua' }
     ]
 
     const savedTheme = localStorage.getItem('theme')
@@ -134,6 +135,7 @@ export default defineComponent({
     
     const router = useRouter()
     const searchKeyword = ref('')
+    const isLoggedIn = ref(false)
 
     const handleSearch = () => {
       if (searchKeyword.value.trim()) {
@@ -152,6 +154,15 @@ export default defineComponent({
       window.dispatchEvent(new CustomEvent('theme-change', { detail: themeName }))
     }
 
+    const checkLoginStatus = () => {
+      isLoggedIn.value = !!localStorage.getItem('currentUser')
+    }
+
+    const handleLogout = () => {
+      localStorage.removeItem('currentUser')
+      window.location.href = '/'
+    }
+
     watchEffect(() => {
       applyTheme(theme.value)
       localStorage.setItem('theme', theme.value)
@@ -159,13 +170,17 @@ export default defineComponent({
 
     onMounted(() => {
       applyTheme(theme.value)
+      checkLoginStatus()
+      window.addEventListener('storage', checkLoginStatus)
     })
 
     return {
       theme,
       themeOptions,
       searchKeyword,
-      handleSearch
+      handleSearch,
+      isLoggedIn,
+      handleLogout
     }
   },
 })
